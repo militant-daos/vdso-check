@@ -9,7 +9,7 @@ void ProcessDirectory(const std::string& directory);
 void ProcessFile(const std::string& file, const std::string& pid);
 
 
-const std::string PROC_PATH("/proc"); // Please note: MUST END WITH '/' SEPARATOR!
+const std::string PROC_PATH("/proc"); 
 const char SEPARATOR = '/';
 
 const std::string VDSO("[vdso]");
@@ -142,7 +142,7 @@ void ProcessFile(const std::string& file, const std::string& pid)
     std::ifstream input(file.c_str());
     if(!input)
     {
-        std::cout << "Failed to open " << file << std::endl;
+        std::cerr << "Failed to open " << file << std::endl;
         return;
     }
 
